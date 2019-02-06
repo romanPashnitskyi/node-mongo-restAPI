@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const bookSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    name: String,
-    author: String,
-    year: Number,
-    description: String
+    name: {type: String, required: true },
+    author: {type: String, required: true },
+    year: {type: Number, required: true },
+    description: {type: String, required: true }
 });
 
 module.exports = mongoose.model('Books', bookSchema);

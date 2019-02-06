@@ -12,6 +12,8 @@ mongoose.connect("mongodb://mongo-username:mongo-pass@node-mongo-rest-shard-00-0
         useMongoClient: true
     });
 
+mongoose.Promise = global.Promise;
+
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
