@@ -8,4 +8,4 @@ const bookSchema = mongoose.Schema({
     description: {type: String, required: true }
 });
 
-module.exports = mongoose.model('Books', bookSchema);
+module.exports = mongoose.model('Book', bookSchema);
